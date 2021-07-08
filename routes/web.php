@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', 'ProductsController@index')->name('product');
-Auth::routes();
+// Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('product');
+// Route::get('/cart/{id}', 'ProductsController@addToCart')
+// ->name('product.addToCart');\
+Route::get('/', [ProductsController::class, 'index'])->name('product.index');
+Route::get('/cart{id}', [ProductsController::class, 'addToCart'])->name('addToCart');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/login', function () {
@@ -25,5 +29,5 @@ Route::get('/register', function () {
     return view('/register');
 });
 
-require __DIR__ . '/auth.php';
+// require __DIR__ . '/auth.php';
 
