@@ -25,10 +25,10 @@ Route::get('/shopping-cart', [ProductsController::class, 'getCart'])->name('prod
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/login', function () {
-    return view('/login');
+    return view('auth.login')->name('login');
 });
 Route::get('/register', function () {
-    return view('/register');
+    return view('auth.register')->name('register');
 });
 
 // require __DIR__ . '/auth.php';
