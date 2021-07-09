@@ -26,7 +26,9 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Shopping Cart</a>
+        <a class="nav-link" href="{{'product.shoppingCart'}}">Shopping Cart
+        <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+        </a>
       </li>
     </ul>
   </div>
