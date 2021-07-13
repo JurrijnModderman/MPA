@@ -31,10 +31,10 @@ class ProductsController extends Controller
 
     public function getCart() {
         if (!Session::has('cart')) {
-            return view('shopping-cart', ['products' => null]);
+            return view('cart', ['products' => null]);
         }
         $oldCart = Session::get('cart');
         $cart =  new Cart($oldCart);
-        return view('shopping-cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+        return view('cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 }

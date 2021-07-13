@@ -22,6 +22,7 @@ Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/cart{id}', [ProductsController::class, 'addToCart'])->name('addToCart');
 
 Route::get('/shopping-cart', [ProductsController::class, 'getCart'])->name('product.shoppingCart');
+Route::get('/cart', [ProductsController::class, 'getCart'])->name('product.cart');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/login', function () {

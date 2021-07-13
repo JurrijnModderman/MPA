@@ -23,7 +23,7 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="logo"><a href="/products"><span>Portfolio</span></a></div>
+    <!-- <div class="logo"><a href="/products"><span>Portfolio</span></a></div> -->
     <hr>
 </nav>
 
@@ -41,14 +41,14 @@
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="name@example.com">
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <input type="text" id="adr" name="address" placeholder="Leerpark">
             <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
+            <input type="text" id="city" name="city" placeholder="Dordrecht">
 
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
+                <input type="text" id="state" name="state" placeholder="D">
               </div>
               <div class="col-50">
                 <label for="zip">Zip</label>
@@ -71,12 +71,12 @@
             <label for="ccnum">Credit card number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
             <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <input type="text" id="expmonth" name="expmonth" placeholder="Month">
 
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                <input type="text" id="expyear" name="expyear" placeholder="2021">
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>

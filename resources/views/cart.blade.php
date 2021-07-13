@@ -27,9 +27,9 @@
 
         <tbody>
         <tr>
-        @foreach(App\Models\Product::all() as $product)
-                <th scope="row">{{$product['qty']}}</th>
-                <td><strong>{{ $product['item'] ['name']  }}</strong></td>
+        @foreach(App\Models\Product::all() as $product) 
+                <th scope="row">{{ $product['qty'] }}</th>
+                <td><strong>{{ $product['item'] ['name'] }}</strong></td>
                 <td><span class="label label-succes">€{{ $product['price'] }}</span></td>
                 <td>
                     <div class="btn-group">
@@ -37,16 +37,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                             Action
                         </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item"
-                               href="{{ route('product.reduceByOne', ['id'=> $product['item']]['id']) }}">Reduce by
-                                1</a>
-                            <a class="dropdown-item"
-                               href="{{ route('product.addByOne', ['id'=> $product['item']]['id']) }}">Add
-                                by 1</a>
-                            <a class="dropdown-item"
-                               href="{{ route('product.remove', ['id'=> $product['item']]['id']) }}">Reduce all</a>
-                        </div>
+                       
                     </div>
                 </td>
         </tr>
@@ -63,7 +54,7 @@
     <hr>
     <div class="row">
         <div class="col-sm6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <a href="{{ route('checkout') }}" type="button" class="btn btn-success" style="color: #fff;">Checkout</a>
+            
         </div>
     </div>
 @else
