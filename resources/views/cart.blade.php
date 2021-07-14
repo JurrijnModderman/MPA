@@ -29,7 +29,7 @@
         <tr>
         @foreach(App\Models\Product::all() as $product) 
                 <th scope="row">{{ $product['qty'] }}</th>
-                <td><strong>{{ $product['item'] ['name'] }}</strong></td>
+                <td><strong>{{ $product->title }}</strong></td>
                 <td><span class="label label-succes">€{{ $product['price'] }}</span></td>
                 <td>
                     <div class="btn-group">
